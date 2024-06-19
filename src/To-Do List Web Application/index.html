@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('to-do-image.jpg');
+            background-size: cover;
+        }
+        .header-bg {
+            background-color: #5B3E31;
+            color: white;
+        }
+        .priority-high {
+            border-left: 4px solid red;
+        }
+        .priority-medium {
+            border-left: 4px solid orange;
+        }
+        .priority-low {
+            border-left: 4px solid green;
+        }
+        .btn-add-task {
+            background-color: #B17261;
+            color: white; /* Text color */
+            border: none;
+        }
+        .btn-add-task:hover {
+            background-color: #A16251; /* Darken slightly on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Task Form -->
+        <div class="card mb-4">
+            <h5 class="card-header header-bg">ADD NEW TASK</h5>
+            <div class="card-body">
+                <form id="task-form">
+                    <div class="form-group">
+                        <input type="text" id="task-title" class="form-control" placeholder="Task Title" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="task-desc" class="form-control" placeholder="Task Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <select id="task-priority" class="form-control">
+                            <option value="high">High Priority</option>
+                            <option value="medium">Medium Priority</option>
+                            <option value="low">Low Priority</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-add-task btn-block">Add Task</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Task List -->
+        <div class="card">
+            <h5 class="card-header header-bg">TO-DO LIST</h5>
+            <div class="card-body">
+                <ul id="task-list" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div class="modal fade" id="editTaskModal" tabindex="-1" role="dialog" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-task-form">
+                        <div class="form-group">
+                            <input type="text" id="edit-task-title" class="form-control" placeholder="Task Title" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="edit-task-desc" class="form-control" placeholder="Task Description"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <select id="edit-task-priority" class="form-control">
+                                <option value="high">High Priority</option>
+                                <option value="medium">Medium Priority</option>
+                                <option value="low">Low Priority</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

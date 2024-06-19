@@ -1,0 +1,70 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    height: 100%;
+    background-image: url('to-do-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(90%); /* Darken the background image */
+}
+
+.card {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Faded white background */
+}
+
+.card-header {
+    font-size: 1.5rem;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item.completed {
+    text-decoration: line-through;
+    background-color: #f2f2f2;
+}
+
+.list-group-item.high {
+    border-left: 4px solid red;
+}
+
+.list-group-item.medium {
+    border-left: 4px solid orange;
+}
+
+.list-group-item.low {
+    border-left: 4px solid green;
+}
+
+.custom-control-label {
+    font-weight: bold; /* Bold task titles */
+}
+
+.alert {
+    opacity: 0.9; /* Make alerts slightly faded */
+}
